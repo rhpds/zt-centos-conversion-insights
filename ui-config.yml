@@ -1,0 +1,21 @@
+---
+antora:
+  name: modules
+  dir: www
+  modules:
+    - name: "01-pre-conversion-analysis-for-converting-to-rhel"
+      label: "Pre Conversion Analysis For Converting To Rhel"
+      solveButton: true
+    - name: "02-fix-inhibitors"
+      label: "Fix Inhibitors"
+      solveButton: true
+    - name: "03-run-conversion-task"
+      label: "Run Conversion Task"
+      solveButton: true
+    - name: "04-completing-conversion"
+      label: "Completing Conversion"
+      solveButton: true
+
+tabs:
+  - name: ">_ terminal"
+    url: /wetty

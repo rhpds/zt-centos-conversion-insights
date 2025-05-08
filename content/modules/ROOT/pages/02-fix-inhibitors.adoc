@@ -1,0 +1,46 @@
+== Fix the inhibitors
+
+This CentOS host has a very basic configuration and is easily remediated
+with an update. Go back into the `+centos+` tab to access the terminal.
+
+Update the host and reboot. Rebooting is required to load the updated
+kernel.
+
+[source,bash,run]
+----
+yum update -y && reboot
+----
+
+.update and reboot
+image::../assets/updatedandreboot.png[update and reboot]
+
+The terminal will lose connection with the centos host leaving the
+message `+exited+`.
+
+.exited
+image::../assets/exited.png[exited]
+
+Reconnect to the session in the `+centos+` tab. Refresh the `+centos+`
+tab until you are reconnected.
+
+.refresh
+image::../assets/refreshbutton.png[refresh]
+
+You may now proceed to the next challenge or you may perform the
+optional step below to re-run the pre-conversion.
+
+== Optional: rerun the the pre-conversion task to check that the conversion can proceed
+
+Once reconnected go back into the virtual browser. Click on
+`+Run task again+`.
+
+.run task again
+image::../assets/runtaskagain.png[run task again]
+
+A new task will be created. image:../assets/newtask.png[new task]
+
+When it completes, the report will tell you that the system is ready for
+conversion.
+
+.proceed
+image::../assets/proceedconversion.png[proceed]

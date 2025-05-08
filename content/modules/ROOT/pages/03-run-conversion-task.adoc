@@ -1,0 +1,80 @@
+== Run the Convert2RHEL conversion task
+
+Run the Convert2RHEL conversion task.
+
+.conversion task
+image::../assets/conver2rhelconversiontask.png[conversion task]
+
+[arabic]
+. Click on `+Tasks+` under `+Automation Toolkit+`.
+. Under `+Convert to RHEL from CentOS Linux 7+`, click
+`+Select systems+`.
+
+Configure the task the following way.
+
+.conversion attributes
+image::../assets/conversionattributes.png[conversion attributes]
+
+[arabic]
+. Give your task the following name
+
+....
+Convert2RHEL task for [[ Instruqt-Var key="vmid" hostname="host" ]]
+....
+
+[arabic, start=2]
+. Select the host `+[[ Instruqt-Var key="vmid" hostname="host" ]]+`.
+. Click `+Next+`.
+
+Finally, click `+Run task+`.
+
+image:../assets/newruntask.png[../assets/newruntask]
+
+The conversion takes around 15 minutes to complete.
+
+== Checking the status of the task
+
+Just as in the first challenge of this lab, there are 2 ways to check on
+the status of the task. The first is to read the `+convert2rhel+` logs
+on the `+centos+` host. The second is to view the status of the task in
+Insights.
+
+To view the `+convert2rhel+` logs, enter the following in the cli of the
+`+centos+` host.
+
+[source,bash,run]
+----
+tail -f /var/log/convert2rhel/convert2rhel.log
+----
+
+.tail logs
+image::../assets/viewlogs.png[tail logs]
+
+To view the status of the task in Insights, click on the `+Activity+`
+tab.
+
+.activity tab
+image::../assets/activitytab.png[activity tab]
+
+Click on the task you created. The name of the task is
+
+....
+Convert2RHEL task for [[ Instruqt-Var key="vmid" hostname="host" ]]
+....
+
+.task
+image::../assets/conversiontask.png[task]
+
+The conversion takes around 15 minutes to complete.
+
+.task status
+image::../assets/taskstatus.png[task status]
+
+Periodically click on the refresh button of the virtual browser to see
+if the task has finished.
+
+.refresh
+image::../assets/refreshstatus.png[refresh]
+
+When the task has finished, you can view the results by clicking on the
+successfully completed task.
